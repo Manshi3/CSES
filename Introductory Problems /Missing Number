@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+#define ll long long
+using namespace std;
+int main() {
+    ll n; cin >> n;
+    vector<ll> arr(n);
+    for(ll i = 0; i < n; i++) cin >> arr[i];
+    // arrays till n natural numbers
+    ll sum_n = 0;
+    for(ll i = 1; i < n; i++) {
+        sum_n = (n * (n + 1)) / 2;
+    }
+    // arrays till givn n numbers
+    ll sum_a = 0;
+    for(ll i = 0; i < n; i++) {
+        sum_a += arr[i];
+    }
+    cout << sum_n - sum_a << endl;
+}
